@@ -323,11 +323,9 @@ class AppStore extends Component {
     console.log(activeTabId)
     console.log(searchInput)
 
-    const searchResults = appsList.filter(eachApp =>
-      eachApp.name.toLowerCase().includes(searchInput.toLowerCase()),
+    const searchResults = filterdApps.filter(eachApp =>
+      eachApp.appName.toLowerCase().includes(searchInput.toLowerCase()),
     )
-
-    const resultingFinalList = filterdApps || searchResults
 
     return (
       <div className="home">
@@ -361,7 +359,7 @@ class AppStore extends Component {
         </div>
         <div className="Items-container">
           <ul className="items-container">
-            {resultingFinalList.map(eachAppDetails => (
+            {searchResults.map(eachAppDetails => (
               <AppItem key={eachAppDetails.appId} appDeatils={eachAppDetails} />
             ))}
           </ul>

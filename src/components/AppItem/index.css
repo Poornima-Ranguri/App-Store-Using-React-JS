@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
-  padding: 30px;
+  padding: 25px;
   background-color: #ffffff;
   border-radius: 10px;
 }
@@ -12,4 +12,9 @@
 .app-image {
   height: 70px;
   width: 70px;
+}
+
+.paragraph {
+  font-family: 'Bree Serif';
+  color: #1e293b;
 }
